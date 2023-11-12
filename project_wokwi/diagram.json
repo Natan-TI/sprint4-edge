@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -223.8, "left": -54.8, "attrs": {} },
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 43.1, "left": -14.6, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -188, "left": -36.18, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir2", "top": -188, "left": 127.02, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:VIN", "bb1:bp.1", "red", [ "h-43.4", "v-196" ] ],
+    [ "bb1:4b.h", "bb1:bp.3", "red", [ "v0" ] ],
+    [ "esp:GND.2", "bb1:bn.1", "black", [ "h-24.2", "v-176.5" ] ],
+    [ "esp:D2", "pir1:OUT", "green", [ "h33.1", "v-140", "h-124.66" ] ],
+    [ "pir1:GND", "bb1:bn.5", "black", [ "v0" ] ],
+    [ "bb1:21b.h", "bb1:bp.17", "red", [ "v0" ] ],
+    [ "bb1:23b.h", "bb1:bn.19", "black", [ "v0" ] ],
+    [ "bb1:22b.h", "esp:D4", "green", [ "v0" ] ],
+    [ "pir1:VCC", "bb1:4b.g", "", [ "$bb" ] ],
+    [ "pir1:OUT", "bb1:5b.g", "", [ "$bb" ] ],
+    [ "pir1:GND", "bb1:6b.g", "", [ "$bb" ] ],
+    [ "pir2:VCC", "bb1:21b.g", "", [ "$bb" ] ],
+    [ "pir2:OUT", "bb1:22b.g", "", [ "$bb" ] ],
+    [ "pir2:GND", "bb1:23b.g", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}
