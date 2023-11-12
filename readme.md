@@ -5,8 +5,8 @@
 <img src="./images/terminal_wokwi.png" width="900px;" alt="Foto do Projeto Arduino"/><br>
   
 ## :link: `Links`
-  <br>
 * Youtube: https://youtu.be/ubO15qhy05E
+  <br>
 * Wokwi: https://wokwi.com/projects/380873831375964161
 
 
